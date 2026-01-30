@@ -35,22 +35,62 @@
         }
         
         header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 50px; background: var(--white); border-bottom: 1px solid #eee;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 50px; 
+            background: var(--white); 
+            border-bottom: 1px solid #eee;
         }
 
-        .logo { font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: 1.5px; text-transform: uppercase; }
+        .logo { 
+            font-size: 24px; 
+            font-weight: 800; 
+            color: var(--navy); 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+        }
 
         .hero {
             height: 50vh;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: white; text-align: center;
+            background-size: cover; 
+            background-position: center;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
+            color: white; 
+            text-align: center;
         }
 
-        /* Contact Form Styles */
         .contact-container {
             max-width: 600px;
-            margin: 50px
+            margin: 50px auto;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        h1 { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Metrolios Realty</div>
+    </header>
+
+    <section class="hero">
+        <h1>Sydney CBD Property Experts</h1>
+        <p>Your journey to the perfect home starts here.</p>
+    </section>
+
+    <main class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Have questions? Chat with Mia using the button in the corner, or send us a message!</p>
+        </main>
+
+</body>
+</html>
