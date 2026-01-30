@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrolios Realty | Sydney CBD Property Experts</title>
+    
+    <script 
+      id="retell-widget" 
+      src="https://dashboard.retellai.com/retell-widget.js" 
+      type="module" 
+      data-public-key="YOUR_RETELL_PUBLIC_KEY" 
+      data-agent-id="YOUR_AGENT_ID" 
+      data-title="Chat with Mia" 
+      data-bot-name="Mia"
+      data-color="#1a2a6c"
+      data-show-ai-popup="true"
+      data-popup-message="Hi! I'm Mia from Metro Realty. How can I help you today? 🏠"
+    ></script>
+
     <style>
         :root { 
             --navy: #1a2a6c; 
@@ -41,7 +55,7 @@
         .hero h1 { font-size: 60px; margin-bottom: 10px; letter-spacing: -1px; }
         .hero p { font-size: 22px; font-weight: 300; opacity: 0.9; }
 
-        /* Floating AI Chat Button */
+        /* 2. CHAT BUBBLE STYLES */
         .ai-chat-bubble {
             position: fixed; bottom: 30px; right: 30px;
             background: var(--navy); color: white;
@@ -77,23 +91,6 @@
         .price { font-size: 26px; font-weight: bold; color: var(--navy); }
         .address { color: #777; margin: 8px 0 20px 0; font-size: 15px; }
         .features { display: flex; gap: 15px; font-size: 13px; color: #555; font-weight: 600; text-transform: uppercase; }
-
-        /* Contact Section */
-        .contact-section { display: flex; flex-wrap: wrap; background: var(--light); padding: 100px 50px; gap: 60px; }
-        .contact-info, .contact-form-container { flex: 1; min-width: 320px; }
-        .contact-form-container { background: var(--white); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 25px; }
-        .form-group input, .form-group textarea { 
-            width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; 
-            box-sizing: border-box; outline: none; transition: 0.3s;
-        }
-        .form-group input:focus { border-color: var(--navy); }
-        .submit-btn { 
-            background: var(--navy); color: white; border: none; padding: 18px; 
-            width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px;
-        }
-
-        footer { text-align: center; padding: 40px; font-size: 14px; color: #999; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
@@ -113,7 +110,7 @@
         <p>Expertise in Sydney’s Premium Real Estate Market</p>
     </section>
 
-    <div class="ai-chat-bubble" onclick="alert('Mia (Metrolios AI) is ready to help! Call us on 02 9260 7100 to speak with her live.')">
+    <div class="ai-chat-bubble" onclick="window.RetellWidget.open()">
         <span class="status-dot"></span>
         Chat with Mia (AI)
     </div>
@@ -136,3 +133,17 @@
                 <div class="card-body">
                     <div class="price">$1,890,000</div>
                     <div class="address">12b Harbour View, Sydney CBD</div>
+                    <div class="features">
+                        <span>2 Bed</span> | <span>2 Bath</span> | <span>1 Car</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Metrolios Realty. Sydney CBD Property Experts.
+    </footer>
+
+</body>
+</html>
